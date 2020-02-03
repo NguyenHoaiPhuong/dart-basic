@@ -14,5 +14,5 @@
 
 void main(List<String> args) {
   String $result = "Hello World";
-  print($result)
+  print($result);
 }
