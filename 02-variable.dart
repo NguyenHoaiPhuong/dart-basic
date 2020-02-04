@@ -53,23 +53,65 @@ void TestMap() {
   print("----------------------------------");
 }
 
+void TestInitialValue() {
+  print("Test initial value in Dart");
+
+  // If we declare a variable without assigning a value to it,
+  // as default, a null value will be attached to this variable.
+
+  int num;
+  print(num);
+
+  double d;
+  print(d);
+
+  bool b;
+  print(b);
+
+  String str;
+  print(str);
+
+  List list;
+  print(list);
+
+  Map map;
+  print(map);
+
+  print("----------------------------------");
+}
+
 void TestDynamic() {
   print("Test dynamic in Dart");
 
-  // If the variable type is not defined, then its default type is dynamic
   dynamic name = "Dart";
+  print(name);
+
+  name = 34;
   print(name);
 
   print("----------------------------------");
 }
 
-void TestConstant() {
-  print("Test constants in Dart");
+void TestConst() {
+  print("Test const keyword in Dart");
 
-  // The final and const keyword are used to declare constants
-  final c = 12;
-  const pi = 3.14;
-  print(c);
+  // The const keyword is used to represent a compile-time constant.
+  // Variables declared using the const keyword are implicitly final.  
+  const pi = 3.14;  
+  const int radius = 12;
+  const area = pi * radius * radius;
+
+  print("Area of a circle with ${radius} is ${area}");
+
+  print("----------------------------------");
+}
+
+void TestFinal() {
+  print("Test final keyword in Dart");
+
+  // The final keyword is used to represent a run-time constant.
+  final pi = 3.14;
+
   print(pi);
 
   print("----------------------------------");
@@ -81,6 +123,9 @@ void main(List<String> args) {
   TestBoolean();
   TestList();
   TestMap();  
-  TestDynamic();  
-  TestConstant();
+  TestInitialValue();
+  TestDynamic();
+  TestConst();
+  TestFinal();
 }
+
