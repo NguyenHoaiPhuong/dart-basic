@@ -17,10 +17,22 @@ int factorial(int input) {
   return output;
 }
 
-void main(List<String> args) {
+void TestForLoop() {
+  print("Test for loop...");
+
   print("Input an integer number:");
   var rawString = stdin.readLineSync();
   int input = int.parse(rawString);
   int output = factorial(input);
   print("Factorial of ${input} is ${output}");
+
+  print("---------------------------");
+}
+
+void TestForInLoop() {
+  
+}
+
+void main(List<String> args) {
+  TestForLoop();
 }
