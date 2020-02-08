@@ -30,9 +30,91 @@ void TestForLoop() {
 }
 
 void TestForInLoop() {
-  
+  print("Test for - in loop...");
+
+  List list = [12, 13, 14];
+
+  for (var elem in list) {
+    print(elem);
+  }
+
+  print("---------------------------");
+}
+
+void TestWhileLoop() {
+  print("Test while loop...");
+
+  int n = 10;
+  while (n > 0) {
+    print(n);
+    n--;
+  }
+
+  print("---------------------------");
+}
+
+void TestDoWhileLoop() {
+  print("Test do while loop...");
+
+  int n = 10;
+  do {
+    print(n);
+    n--;
+  } while (n > 0);
+
+  print("---------------------------");
+}
+
+void TestBreak() {
+  print("Test break...");
+
+  print("Print integer from 0 to 9, but break at 5");
+  for (var i = 0; i < 10; i++) {
+    if (i > 5) {
+      break;
+    }
+    print(i);
+  }
+
+  print("---------------------------");
+
+}
+
+void TestContinue() {
+  print("Test continue...");
+
+  print("Print only odd number from 1 to 10");
+  for (int i = 0; i < 10; i++) {
+    if (i % 2 == 0) {
+      continue;
+    }
+    print(i);
+  }
+
+  print("---------------------------");
+}
+
+void TestLabel() {
+  print("Test label...");
+
+  outerloop:
+  for (var i = 0; i < 10; i++) {
+    if (i == 5) {
+      break outerloop;
+    }
+    print(i);
+  }
+  print("Here is after the for loop");
+
+  print("---------------------------");
 }
 
 void main(List<String> args) {
-  TestForLoop();
+  // TestForLoop();
+  // TestForInLoop();
+  // TestWhileLoop();
+  // TestDoWhileLoop();
+  // TestBreak();
+  // TestContinue();
+  TestLabel();
 }
