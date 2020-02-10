@@ -22,7 +22,7 @@ void TestParsing() {
   print("-----------------------------");
 }
 
-void TestNumClass() {
+void TestNumClassProperties() {
   print("Test number properties...");
 
   int n = 20;
@@ -38,8 +38,22 @@ void TestNumClass() {
   print("-----------------------------");
 }
 
+void TestNumClassMethods() {
+  print("Test number class methods...");
+
+  double num = -10.51;
+  print("Original number: ${num}");
+  print("abs: ${num.abs()}");
+  print("ceil: ${num.ceil()}");
+  print("floor: ${num.floor()}");
+  print("round: ${num.round()}");
+  print("truncate: ${num.truncate()}");
+
+  print("-----------------------------");
+}
 void main(List<String> args) {
   // TestNumbers();
   // TestParsing();
-  TestNumClass();
+  // TestNumClassProperties();
+  TestNumClassMethods();
 }
