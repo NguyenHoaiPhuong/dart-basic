@@ -23,6 +23,13 @@ void TestGrowableList() {
   lst.add(13);
   lst.add(11);
   lst.add("akagi");
+  lst.addAll(["yushin", "mogami"]);
+  print(lst);
+
+  int value = 13;
+  bool res = lst.remove(value);
+  print(res);
+  print('The value of list after removing the list element ${value}');
   print(lst);
 
   print("-----------------------------");
@@ -41,6 +48,6 @@ void TestListProperties() {
 
 void main(List<String> args) {
   // TestFixedLengthList();
-  // TestGrowableList();
-  TestListProperties();
+  TestGrowableList();
+  // TestListProperties();
 }
