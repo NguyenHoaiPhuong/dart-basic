@@ -1,25 +1,20 @@
-class Employee {
-  String name;
-
-  // getter method
-  String get emp_name {
-    return name;
-  }
-
-  // setter method
-  void set emp_name(String name) {
-    this.name = name;
-  }
-
-  // function definition
-  void fullname() {
-    print(this.name);
-  }
-}
+import 'mobile.dart';
 
 void main(List<String> args) {
-  Employee akagi = new Employee();
-  akagi.name = 'Akagi';
-  akagi.fullname();
-  // print(akagi.name);
+  print("--------Mobile 1 info--------");
+  Mobile mobile1 = new Mobile(Color.BLACK, "Iphone 10");
+  // mobile1.calling();
+  // mobile1.musicPlaying();
+  mobile1.display();
+  print("-----------------------------");
+
+  print("--------Mobile 2 info--------");
+  Mobile mobile2 = new Mobile.color(Color.PINK);
+  mobile2.display();
+  print("-----------------------------");
+
+  print("--------Mobile 3 info--------");
+  Mobile mobile3 = new Mobile.brandName("Samsung Note 10");
+  mobile3.display();
+  print("-----------------------------");
 }
