@@ -118,6 +118,7 @@ void TestFinal() {
 }
 
 void main(List<String> args) {
+  TestInitVariable();
   TestNumber();
   TestString();
   TestBoolean();
