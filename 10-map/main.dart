@@ -39,7 +39,7 @@ void TestMapMethods() {
   });
 
   loginInfo.remove("username");
-  print("After remive username: ${loginInfo}");
+  print("After remove username: ${loginInfo}");
 
   loginInfo.clear();
   print("After clear: ${loginInfo}");
@@ -51,7 +51,7 @@ void TestMapMethods() {
 }
 
 void main(List<String> args) {
-  // TestMapSyntax();
+  TestMapSyntax();
   // TestMapProperties();
-  TestMapMethods();
+  // TestMapMethods();
 }
