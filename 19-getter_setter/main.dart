@@ -18,11 +18,7 @@ class Student {
 	double _percent;  // Private instance variable
 
 	// custom setter for percentage
-	void set percentage(double marksSecured) {
-		_percent = (marksSecured / 500) * 100;
-	}
+	void set percentage(double marksSecured) => _percent = (marksSecured / 500) * 100;
 	// custom getter for percentage
-	double get percentage {
-		return _percent;
-	}
+	double get percentage => _percent;
 }
