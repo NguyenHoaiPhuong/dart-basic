@@ -1,6 +1,4 @@
 // Optional Positional parameter
-import '../04-loop/04-loop.dart';
-
 add(int a, int b, [int c, int d]) {
   int res;
   res = a + b;
