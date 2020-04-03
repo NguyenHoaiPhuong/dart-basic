@@ -1,5 +1,6 @@
 import 'dart:io';
 import 'arithmetic.dart';
+import 'person.dart';
 
 int readInput() {
   print("Input an integer number:");
@@ -57,10 +58,16 @@ TestLamdaFunction() {
   printMsg("My name is Akagi");
 }
 
+TestRequiredAnnotation() {
+  Person akagi = Person("Nguyen", "Hoai Phuong");
+  print(akagi.fullName);
+}
+
 void main(List<String> args) {
   // TestPositionalParameter();
   // TestNamedParameter();
   // TestParamWithDefaultValue();
   // TestRecursive();
-  TestLamdaFunction();
+  // TestLamdaFunction();
+  TestRequiredAnnotation();
 }
