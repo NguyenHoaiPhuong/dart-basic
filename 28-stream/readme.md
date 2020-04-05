@@ -35,3 +35,35 @@ The StreamSubscription object also allows you to:
 * pause,
 * resume.
 
+### Is a Stream only a simple pipe?
+
+No, a Stream also allows to process the data that flows inside it before it goes out.
+
+To control the processing of the data inside a Stream, we use a **StreamTransformer**, which is nothing but
+
+* a function that “captures” the data that flows inside the Stream
+* does something with the data
+* the outcome of this transformation is also a Stream
+
+A StreamTransformer may be used to do any type of processing, such as, e.g.:
+
+* filtering: to filter the data based on any type of condition,
+* regrouping: to regroup data,
+* modification: to apply any type of modification to the data,
+* inject data to other streams,
+* buffering,
+* processing: do any kind of action/operation based on the data,
+
+### Types of Streams
+
+#### Single-subscription Streams
+
+This type of Stream only allows a single listener during the whole lifetime of that Stream.
+
+#### Broadcast Streams
+
+This second type of Stream allows any number of listeners.
+
+## References
+
+https://www.didierboelens.com/2018/08/reactive-programming-streams-bloc/

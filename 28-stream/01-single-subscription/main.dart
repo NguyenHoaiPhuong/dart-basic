@@ -15,7 +15,9 @@ void main(List<String> args) {
   /**
    * Initialize a "Single-Subscription" Stream controller
    */
-  final StreamController ctrl = StreamController();
+  final StreamController ctrl = StreamController(
+    onListen: () => print("On listen ..."),
+  );
 
   /**
    * We here add the data that will flow inside the stream
@@ -27,6 +29,11 @@ void main(List<String> args) {
     }
     print(data);
   });
+
+  // Below chunk code will cause error because this is a single-subscription stream
+  // final StreamSubscription subscription1 = ctrl.stream.listen((data) {
+  //   print('subscription 1: $data');
+  // });
 
   ctrl.sink.add('my data');
   ctrl.sink.add(1234);
